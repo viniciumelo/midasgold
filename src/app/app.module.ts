@@ -11,6 +11,7 @@ import { HistoryPage } from '../pages/history/history';
 import { SettingPage } from '../pages/setting/setting';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
+import { CreditcardPage } from '../pages/creditcard/creditcard';
 import { PerfilPage } from '../pages/perfil/perfil';
 
 import { NFC, Ndef } from '@ionic-native/nfc';
@@ -23,6 +24,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     LoginPage,
     PerfilPage,
+    CreditcardPage,
     ReceivablePage,
     PayPage,
     HomePage,
@@ -42,6 +44,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     LoginPage,
     PerfilPage,
+    CreditcardPage,
     ReceivablePage,
     PayPage,
     HomePage,
