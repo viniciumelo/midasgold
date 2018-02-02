@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ReceivablePage } from '../receivable/receivable';
-import { ContactPage } from '../contact/contact';
+import { PayPage } from '../pay/pay';
 import { HomePage } from '../home/home';
 import { HistoryPage } from '../history/history';
 
@@ -11,7 +11,7 @@ import { HistoryPage } from '../history/history';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = ContactPage;
+  tab2Root = PayPage;
   tab3Root = ReceivablePage;
   tab4Root = HistoryPage;
 
