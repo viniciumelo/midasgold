@@ -8,14 +8,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SettingPage {
 
+  private passwordShow:boolean=false;
+  private digitalShow:boolean=false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   onPasswordElement(e:any, showMeAd) {    
     if(e.checked == true){
-      document.getElementById('passwordInput').removeAttribute("disabled");
+      this.passwordShow=true;
     } else {
-      alert('advertisment off');
+      this.passwordShow=false;
+    }
+  }
+
+  onDigitalElement(e:any, showMeAd) {    
+    if(e.checked == true){
+      this.digitalShow=true;
+    } else {
+      this.digitalShow=false;
     }
   }
 

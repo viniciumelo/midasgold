@@ -8,7 +8,7 @@
 
 
 <ion-content padding>
-    <ion-card-content>
+    <ion-card-content text-center>
       <ion-item>
         <ion-label stacked>Valor mínimo</ion-label>
         <ion-input type="number"></ion-input>
@@ -17,14 +17,15 @@
         <ion-label> Senha</ion-label>
         <ion-toggle name="senha" checked="false" (ionChange)="onPasswordElement($event)"></ion-toggle>
       </ion-item>
-      <ion-item>      
-        <!-- <ion-icon name="eye"></ion-icon> -->
-        <ion-input type="password" id="passwordInput" disabled></ion-input>
+      <ion-item [hidden]="!passwordShow">      
+        <ion-label>Informar Senha</ion-label>
+        <ion-input type="password"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label> Digital</ion-label>
-        <ion-toggle name="digital" checked="false"></ion-toggle>
+        <ion-toggle name="digital" checked="false" (ionChange)="onDigitalElement($event)"></ion-toggle>
       </ion-item>
+      <img [hidden]="!digitalShow" width="67" height="100" src="assets/imgs/digital.png"/>
       <button ion-button color="secondary" outline block>Enviar</button>
     </ion-card-content>
 </ion-content>
