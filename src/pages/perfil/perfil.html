@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list text-center>
+
+        <ion-item>
+          <ion-label floating>Nome Completo</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Data de Nascimento</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>CPF</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>RG</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>CEP</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Estado</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Pais</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label> Empresa?</ion-label>
+          <ion-toggle name="senha" checked="false" (ionChange)="onDadosEmpresaElement($event)"></ion-toggle>
+        </ion-item>
+        <ion-item [hidden]="!empresaShow">
+          <ion-label floating>Nome Fantasia</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item [hidden]="!empresaShow">
+          <ion-label floating>Razão Social</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item [hidden]="!empresaShow">
+          <ion-label floating>CNPJ</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>
