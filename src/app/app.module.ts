@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { HistoryPage } from '../pages/history/history';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { NFC, Ndef } from '@ionic-native/nfc';
@@ -19,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    HistoryPage,
     TabsPage
   ],
   imports: [
@@ -31,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
+    HistoryPage,
     TabsPage
   ],
   providers: [
