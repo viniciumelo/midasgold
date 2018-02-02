@@ -48,7 +48,7 @@ export class LoginPage {
           this.userData.login = null;
           this.userData.senha = null;
  
-          this.passaIdUser();
+        //s  this.passaIdUser();
         }
       }, Error => {
         console.log(Error);
