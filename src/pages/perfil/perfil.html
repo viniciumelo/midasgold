@@ -28,15 +28,23 @@
         </ion-item>
         <ion-item>
           <ion-label floating>CEP</ion-label>
-          <ion-input type="number"></ion-input>
+          <ion-input type="number" (blur)="cepBlurEvent($event);"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Estado</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [ngModel]="data?.uf"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Bairro</ion-label>
+          <ion-input type="text" [ngModel]="data?.bairro"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Logradouro</ion-label>
+          <ion-input type="text" [ngModel]="data?.logradouro"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Pais</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" value="Brasil"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label> Empresa?</ion-label>

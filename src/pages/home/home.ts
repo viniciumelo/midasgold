@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, ActionSheetController } from 'ionic-angular';
 import { SettingPage } from '../setting/setting';
 import { PerfilPage } from '../perfil/perfil';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -26,6 +27,12 @@ export class HomePage {
           icon: 'settings',
           handler: () => {
             this.navCtrl.push(SettingPage);
+          }
+        },{
+          text: 'Sair',
+          icon: 'power',
+          handler: () => {
+            this.navCtrl.setRoot(LoginPage);
           }
         },{
           text: 'Cancelar',
