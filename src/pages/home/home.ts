@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController } from 'ionic-angular';
+import { NavController, ActionSheetController, App } from 'ionic-angular';
 import { SettingPage } from '../setting/setting';
 import { PerfilPage } from '../perfil/perfil';
 import { LoginPage } from '../login/login';
+import { CreditcardPage } from '../creditcard/creditcard';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController) {
+  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController, public _app: App ) {
   }
 
   onMenu() {
@@ -29,10 +30,16 @@ export class HomePage {
             this.navCtrl.push(SettingPage);
           }
         },{
+          text: 'Cartões',
+          icon: 'card',
+          handler: () => {
+            this.navCtrl.push(CreditcardPage);
+          }
+        },{
           text: 'Sair',
           icon: 'power',
           handler: () => {
-            this.navCtrl.setRoot(LoginPage);
+            this._app.getRootNav().setRoot(LoginPage);
           }
         },{
           text: 'Cancelar',
