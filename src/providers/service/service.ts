@@ -1,17 +1,28 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { LoginUser } from '../../app/models/login';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the ServiceProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
+
 @Injectable()
 export class ServiceProvider {
+  logUser = {} as LoginUser;
 
-  constructor(public http: HttpClient) {
+  apiUrl = "http://189.126.143.60:8084/MWS/web/serviceMobile/";
+
+  constructor(public http: Http) {
     console.log('Hello ServiceProvider Provider');
   }
+
+  getLogar(use: LoginUser) {
+    return this.http.get(this.apiUrl + "Login/" + use.login + "/" + use.senha);
+  }
+
+
+
+
+
+
 
 }
