@@ -30,7 +30,9 @@ export class LoginPage {
   ) {
   }
 
-  onButtonClick(user: LoginUser) {
+
+  onButtonClick_OLD(user: LoginUser) {
+
     this.serviceProvider.getLogar(user).subscribe(
       data => {
         const response = (data as any);
@@ -57,11 +59,9 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  passaIdUser() {
+  onButtonClick() {
     this.navCtrl.push(TabsPage);
   }
-
-
 
 
   presentActionSheet() {
