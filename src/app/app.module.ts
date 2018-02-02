@@ -7,6 +7,7 @@ import { ReceivablePage } from '../pages/receivable/receivable';
 import { PayPage } from '../pages/pay/pay';
 import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
+import { SettingPage } from '../pages/setting/setting';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { NFC, Ndef } from '@ionic-native/nfc';
@@ -21,11 +22,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PayPage,
     HomePage,
     HistoryPage,
+    SettingPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsHideOnSubPages: true,
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,6 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PayPage,
     HomePage,
     HistoryPage,
+    SettingPage,
     TabsPage
   ],
   providers: [
